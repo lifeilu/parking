@@ -1,0 +1,41 @@
+/* Empty. Add your own CSS if you like */
+.cash-input{
+    display: inline-block;
+    float: left;
+}
+.charge{
+	cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 2;
+}
+.charge-button{
+	min-height: 25px;
+	line-height: 25px;
+}
+.login-input {
+	font-size: 16px !important;
+	height: 40px !important;
+	width: 90%;
+	padding-left: 2% !important;
+	display: inline-block !important;
+}
+.green-bottom-border {
+	border-bottom: solid 1px #4AA53D !important;
+}
+#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+#l-map{height:300px;width:100%;}
+#r-result,#r-result table{width:100%;}
+#canvas {width: 100%;height: 100%;overflow: hidden;margin:0;}
+/*.mybody{*/
+      /*background: -webkit-linear-gradient(left top,blue,white);*/
+      /*background: -o-linear-gradient(bottom right,blue,white);*/
+      /*background: -moz-linear-gradient(bottom right, blue,white);*/
+      /*background: linear-gradient(to bottom right, #387ef5,#fafafa);*/
+/*}*/
+/*.mytitle{*/
+      /*color: #fafafa;*/
+      /*background: #387ef5;*/
+      /*width: 100%;*/
+      /*margin-left: 0;*/
+/*}*/

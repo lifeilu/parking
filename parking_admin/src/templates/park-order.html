@@ -1,0 +1,96 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >订单管理：包括订单的查看</uib-alert>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <rd-widget>
+            <rd-widget-header icon="fa-tasks" title="订单查询">
+                <button class="btn btn-sm btn-info" style="width: 25%;margin-left: -27%" ng-click="search()">查询</button>
+                <button class="btn btn-sm btn-info" style="width:25%;margin-left: 33%;background-color: transparent;border-color: #d9edf7;color: black;" ng-click="changeView()">{{listMessage}}</button>
+            </rd-widget-header>
+            <!--<rd-widget-body classes="medium no-padding">-->
+                <div class="table-responsive" ng-show="listshow">
+                    <table st-table="rowCollection" class="table">
+                        <thead>
+                        <tr>
+                            <th >
+                                <input st-search="id" placeholder="订单ID" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="userid" placeholder="用户ID" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="parkid" placeholder="停车场序号" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="parkspaceid" placeholder="停车位序号" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="isleave" placeholder="是否离开" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th colspan="2">
+                                <input st-search placeholder="全局搜索" class="input-sm form-control" type="search"/>
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th st-sort = "id">订单号</th>
+                            <th st-sort = "userid">用户ID</th>
+                            <th st-sort = "parkid">停车场号</th>
+                            <th st-sort = "parkspaceid">停车位号</th>
+                            <th st-sort = "entertime">停入时间</th>
+                            <!--<th st-sort = "isleave">是否离开</th>-->
+                            <th st-sort = "leavetime">离开时间</th>
+                            <th st-sort = "charge">收费</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr ng-repeat="row in rowCollection">
+                            <td style="width: 12%">{{row.id}}</td>
+                            <td style="width: 12%">{{row.userid}}</td>
+                            <td style="width: 12%">{{row.parkid}}</td>
+                            <td style="width: 12%">{{row.parkspaceid}}</td>
+                            <td style="width: 15%">{{row.entertime}}</td>
+                            <!--<td data-ng-model="parseDate(new Date(Date.parse(row.entertime)))"></td>-->
+                            <!--<td>{{row.isleave}}</td>-->
+                            <td style="width: 15%">{{row.leavetime}}</td>
+                            <td style="width: 5%">{{row.charge}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <!--</rd-widget-body>-->
+        </rd-widget>
+    </div>
+    <!--<div class="col-lg-6">-->
+        <!--<rd-widget>-->
+            <!--<rd-widget-header icon="fa-plus" title="订单新增">-->
+                <!--<a href="#/add">添加</a>-->
+                <!--&lt;!&ndash;<button class="btn btn-sm btn-info" ng-click="">添加</button>&ndash;&gt;-->
+            <!--</rd-widget-header>-->
+            <!--<rd-widget-body classes="medium no-padding">-->
+                <!--<div class="message">-->
+                    <!--这部分提供对订单的新增功能-->
+                    <!--&lt;!&ndash;<span class="error">尚未实现!</span>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</rd-widget-body>-->
+        <!--</rd-widget>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-6">-->
+        <!--<rd-widget>-->
+            <!--<rd-widget-header icon="fa-tasks" title="订单分析">-->
+                <!--<a href="#/modify">修改</a>-->
+                <!--&lt;!&ndash;<button class="btn btn-sm btn-info" ng-click="">修改</button>&ndash;&gt;-->
+            <!--</rd-widget-header>-->
+            <!--<rd-widget-body classes="medium no-padding">-->
+                <!--<div class="message">-->
+                    <!--这部分提供对订单的修改功能-->
+                    <!--&lt;!&ndash;<span class="error">尚未实现!</span>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</rd-widget-body>-->
+
+        <!--</rd-widget>-->
+    <!--</div>-->
+</div>

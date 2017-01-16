@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" ng-app="RDash">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />-->
+
+	<title>Parking</title>
+  <!-- STYLES -->
+  <!-- build:css lib/css/main.min.css -->
+  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
+  <link rel="stylesheet" type="text/css" href="components/ng-dialog/css/ngDialog.css">
+  <link rel="stylesheet" type="text/css" href="components/ng-dialog/css/ngDialog-theme-default.min.css">
+  <!-- endbuild -->
+  <!-- SCRIPTS -->
+  <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
+  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+  <script type="text/javascript" src="components/jquery/dist/jquery.js"></script>
+  <!--<script type="text/javascript" src="components/jquery/dist/jquery.qrcode.min.js"></script>-->
+  <!--<script type="text/javascript" src="components/jquery/dist/jquery.qrcode.js"></script>-->
+  <script type="text/javascript" src="components/jquery/dist/qrcode.js"></script>
+  <script type="text/javascript" src="components/angular-smart-table/dist/smart-table.js"></script>
+  <script type="text/javascript" src="components/ng-baidu-map/dist/angular-baidu-map.js"></script>
+  <script type="text/javascript" src="components/ng-dialog/js/ngDialog.min.js"></script>
+
+  <!--<script src="components/ng-file-upload/FileAPI.js"></script>-->
+  <!--<script src="components/ng-file-upload/ng-file-upload.min.js"></script>-->
+  <!--<script src="components/ng-file-upload/ng-file-upload-all.min.js"></script>-->
+  <!--<script src="components/ng-file-upload/ng-file-upload-shim.min.js"></script> &lt;!&ndash; for no html5 browsers support &ndash;&gt;-->
+
+
+  <!--<script type="text/javascript" src="components/ng-baidu-map/dist/angular-baidu-map.js"></script>-->
+  <!-- endbuild -->
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="js/dashboard.min.js"></script>
+  <!--<script type="text/javascript" src="js/directives/loading.js"></script>-->
+  <!--<script type="text/javascript" src="js/directives/widget.js"></script>-->
+  <!--<script type="text/javascript" src="js/directives/widget-body.js"></script>-->
+  <!--<script type="text/javascript" src="js/directives/widget-header.js"></script>-->
+  <!--<script type="text/javascript" src="js/directives/widget-footer.js"></script>-->
+  <!--<script type="text/javascript" src="js/module.js"></script>-->
+  <!--<script type="text/javascript" src="js/routes.js"></script>-->
+  <!--<script type="text/javascript" src="js/controllers/alert-ctrl.js"></script>-->
+  <!--<script type="text/javascript" src="js/controllers/master-ctrl.js"></script>-->
+  <!--<script type="text/javascript" src="js/controllers/qrcode-ctrl.js"></script>-->
+  <!--<script type="text/javascript" src="js/controllers/user-ctrl.js"></script>-->
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nhB87EF7jEp0diMOOTjHkXYyHQwGKojT"></script>
+  <!--used for file upload-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--<script type="text/javascript" src="http://www.xiaoleilu.com/js/jquery.qrcode.js"></script>-->
+  <!--<script type="text/javascript" src="http://www.xiaoleilu.com/js/qrcode.js"></script>-->
+
+  <script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+  <!--<script type="text/javascript" src="js/controllers/baiduMap-ctrl.js"></script>-->
+
+</head>
+<body ng-controller="MasterCtrl">
+  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar">
+        <li class="sidebar-main">
+          <a ng-click="toggleSidebar()">
+            智能停车场管理系统
+            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+          </a>
+        </li>
+        <li class="sidebar-title"><span>管理列表</span></li>
+        <li class="sidebar-list">
+          <a href="#">主页 <span class="menu-icon fa fa-tachometer"></span></a>
+        </li>
+        <!--<li class="sidebar-list">-->
+          <!--<a href="#/tables">参考图表 <span class="menu-icon fa fa-table"></span></a>-->
+        <!--</li>-->
+        <li class="sidebar-list">
+          <a href="#/user">用户管理 <span class="menu-icon fa fa-table"></span></a>
+        </li>
+
+        <li class="sidebar-list">
+          <a href="#/lot">停车场管理 <span class="menu-icon fa fa-table"></span></a>
+        </li>
+
+        <li class="sidebar-list">
+          <a href="#/order">订单管理 <span class="menu-icon fa fa-table"></span></a>
+        </li>
+        <!--<li class="sidebar-list">-->
+          <!--<a href="#/space">停车位管理 <span class="menu-icon fa fa-table"></span></a>-->
+        <!--</li>-->
+        <li class="sidebar-list">
+          <a href="#/qrCode">二维码生成 <span class="menu-icon fa fa-table"></span></a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="col-xs-4">
+          <a href="https://github.com/12sunyan/git-github.com-12sunyan-Parking" target="_blank">
+            Github
+          </a>
+        </div>
+        <div class="col-xs-4">
+          <a href="http://ist.sjtu.edu.cn/" target="_blank">
+            关于我们
+          </a>
+        </div>
+        <div class="col-xs-4">
+          <a href="#">
+            支持
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar -->
+
+    <div id="content-wrapper">
+      <div class="page-content">
+
+        <!-- Header Bar -->
+        <div class="row header">
+          <div class="col-xs-12">
+            <div class="user pull-right">
+              <div class="item dropdown" uib-dropdown>
+                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                  <img src="img/admin.jpeg">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class="dropdown-header">
+                    管理员
+                  </li>
+                  <li class="divider"></li>
+                  <li class="link">
+                    <a href="#">
+                      个人中心
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li class="link">
+                    <a href="#">
+                      登出
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="item dropdown" uib-dropdown>
+               <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
+                  <i class="fa fa-bell-o"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li class="dropdown-header">
+                    消息
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">暂无消息!</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="meta">
+              <div class="page">
+                停车场管理系统
+              </div>
+              <div class="breadcrumb-links">
+                <a href="#/">主页</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Header Bar -->
+
+        <!-- Main Content -->
+        <div ui-view></div>
+
+      </div><!-- End Page Content -->
+    </div><!-- End Content Wrapper -->
+  </div><!-- End Page Wrapper -->
+</body>
+</html>

@@ -1,0 +1,129 @@
+<ion-view view-title="用户中心">
+  <ion-nav-buttons >
+      <button class="button button-icon icon " ng-click="save()" style="right: -530%;">修改</button>
+  </ion-nav-buttons>
+  <ion-content>
+    <img ng-src="img/user.png" style="width: 24%;margin-top: 5%;margin-left: 38%;" ng-click="photoUpload()">
+    <!--<section class="wrapper">-->
+    <!--<section class="annular_gear" ></section>-->
+    <!--<section class="sun_gear"></section>-->
+    <!--<section class="planet_gears">-->
+    <!--<section class="first_planet_gear"></section>-->
+    <!--<section class="second_planet_gear"></section>-->
+    <!--<section class="third_planet_gear"></section>-->
+    <!--<section class="fourth_planet_gear"></section>-->
+    <!--</section>-->
+    <!--</section>-->
+
+    <div style=" margin-right: auto; margin-left: auto; width: 80%">
+
+      <div class="green-bottom-border" style="margin-top: 2%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div class="row" style="">
+          <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+            <span >用户名</span>
+          </div>
+          <div class=".col-md-6" >
+            <input type="text" style="margin-left:132%" placeholder="请填写用户名" ng-model="user.username">
+          </div>
+        </div>
+
+        <!--<div style="margin: 0 auto;">-->
+          <!--&lt;!&ndash;<i class="ion-android-person login-icon"  style="color:#11c1f3;font-size: 100%">&nbsp&nbsp用户名</i>&ndash;&gt;-->
+          <!--<input type="text" class="login-input" style="width: 50%" placeholder="请填写用户名" ng-model="user.username">-->
+        <!--</div>-->
+      </div>
+        <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important" style="color:#11c1f3;font-size: 100%">
+          <div class="row">
+            <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+              <span >手机号</span>
+            </div>
+            <div class=".col-md-6" >
+              <input type="text" style="margin-left:112%" placeholder="请填写手机号" ng-model="user.phone">
+            </div>
+          </div>
+
+          <!--<div style="margin: 0 auto;">-->
+            <!--&lt;!&ndash;<i class="ion-android-phone-portrait login-icon" style="color:#11c1f3;font-size: 100%">&nbsp&nbsp手机号</i>&ndash;&gt;-->
+            <!--<input type="text" class="login-input" placeholder="请填写手机号" ng-model="user.phone">-->
+          <!--</div>-->
+        </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div class="row">
+          <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+            <span >汽车型号</span>
+          </div>
+          <div class=".col-md-6" >
+            <input type="text" style="margin-left:108%" placeholder="请填写汽车型号" ng-model="user.cartype">
+          </div>
+      </div>
+
+
+        <!--<div style="margin: 0 auto;">-->
+          <!--&lt;!&ndash;<i class="ion-android-car login-icon" style="color:#11c1f3;font-size: 100%">&nbsp&nbsp汽车型号</i>&ndash;&gt;-->
+          <!--<input type="text" class="login-input" placeholder="请填写汽车型号" ng-model="user.cartype">-->
+        <!--</div>-->
+      </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div class="row">
+            <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+              <span >车牌号</span>
+            </div>
+            <div class=".col-md-6" >
+              <input type="text" style="margin-left:122%;width: 50%" placeholder="请填写车牌号" ng-model="user.carid">
+            </div>
+      </div>
+
+
+
+    <!--<div style="margin: 0 auto;">-->
+          <!--&lt;!&ndash;<i class="ion-android-car login-icon" style="color:#11c1f3;font-size: 100%">&nbsp&nbsp车牌号</i>&ndash;&gt;-->
+          <!--<input type="text" class="login-input" placeholder="请填写车牌号" ng-model="user.carid">-->
+        <!--</div>-->
+      </div>
+
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+      <!--<div style="margin-top: 8%; vertical-align: middle">-->
+        <div class="row">
+          <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+            <span >账户余额</span>
+          </div>
+          <div class=".col-md-6" >
+            <input type="text" style="margin-left:138%"  placeholder="请填写金额" ng-model="user.money">
+          </div>
+        </div>
+
+        <!--<div style="margin: 0 auto;" style="color:#11c1f3;font-size: 100%">-->
+          <!--&lt;!&ndash;<i class="ion-cash login-icon" style="color:#11c1f3;font-size: 100%">&nbsp&nbsp余额</i>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div style="margin: 0 auto;">-->
+        	<!--<a class = "charge" ng-click = "charge($event)" style="margin-left:20px;font-size: 16px;">充值</a>-->
+        	<!--<input type="text" class="cash-input" placeholder="请填写金额" disabled=true ng-model="user.money" style="width: 40%;">-->
+        <!--</div>-->
+      </div>
+
+
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle;border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <!--<div style="margin-top: 8%; vertical-align: middle">-->
+        <div class="row">
+          <div class="col-md-6" style="margin-left:-2%;margin-top: 3%">
+            <span >账户充值</span>
+          </div>
+          <div class=".col-md-6" style="margin-left: 55%">
+            <a class = "charge" ng-click = "charge($event)" style="font-size: 16px;">点击充值</a>
+            <!--<input type="text" style="margin-left:140%"  placeholder="请填写金额" ng-model="user.money">-->
+          </div>
+        </div>
+      </div>
+
+      <!---->
+      <!--<div style="margin-left: 82%">-->
+            <!--<a class = "charge" ng-click = "charge($event)" style="margin-left:20px;font-size: 16px;">充值</a>-->
+      <!--</div>-->
+
+
+      <div class="center-middle" style="margin-top:10%;text-align: center;">
+        <button class="button button-balanced" ng-click="logout()" style="font-size:20px;width: 100%;background-color:#11c1f3 ;color:#fafafa">注销</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

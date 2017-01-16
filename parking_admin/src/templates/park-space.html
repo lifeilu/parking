@@ -1,0 +1,77 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >停车位管理：包括停车位的增删改查</uib-alert>
+</div>
+
+    <div class="col-lg-12">
+    <rd-widget>
+        <rd-widget-header icon="fa-tasks" title="停车位查询">
+            <button class="btn btn-sm btn-info" style="width: 25%;margin-left: -51%" ng-click="search()">查询</button>
+            <button class="btn btn-sm btn-info" style="width:25%;margin-left: 47%;background-color: transparent;border-color: #d9edf7;color: black" ng-click="changeView()">{{listMessage}}</button>
+        </rd-widget-header>
+        <!--<rd-widget-body classes="medium no-padding">-->
+            <div class="table-responsive" ng-show="listshow">
+                <table st-table="rowCollection" class="table">
+                        <thead>
+                        <tr>
+                            <th >
+                                <input st-search="isfull" placeholder="是否停车" class="input-sm form-control" type="search"/>
+                            </th>
+
+                            <th >
+                                <input st-search="spaceid" placeholder="停车位ID" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="xpos" placeholder="行号" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th >
+                                <input st-search="ypos" placeholder="列号" class="input-sm form-control" type="search"/>
+                            </th>
+                            <th colspan="3">
+                                <input st-search placeholder="全局搜索" class="input-sm form-control" type="search"/>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th style="width: 20%"  st-sort = "parkid">停车场序号</th>
+                            <th style="width: 22%" st-sort = "id">停车位序号</th>
+                            <th style="width: 10%" st-sort = "xpos">行号</th>
+                            <th style="width: 12%" st-sort =  "ypos">列号</th>
+                            <th style="width: 10%" st-sort = "isfull">是否停车</th>
+                            <th>查看所停车辆</th>
+                            <th>生成二维码</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in rowCollection">
+                            <!--<td>{{row.isfull}}</td>-->
+                            <td >{{row.parkid}}</td>
+                            <td >{{row.id}}</td>
+                            <td >{{row.xpos}}</td>
+                            <td >{{row.ypos}}</td>
+                            <td >{{{true: "有车", false:"空闲"}[row.isfull == 1]}}</td>
+
+                            <td><img src="../img/see.png" ng-click="seeCar(row)" style="height:15%;margin-left: 14%"></td>
+                            <td><img src="../img/qrcode.jpg" ng-click="spaceqrCode(row)" style="height:5%;margin-left: 30%"></td>
+                            <!--<td><button ng-click="seeCar(row)"></button></td>-->
+                            <!--<td><button ng-click="spaceqrCode(row)"></button></td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+            </div>
+        <!--</rd-widget-body>-->
+    </rd-widget>
+    </div>
+
+
+    <div class="col-lg-12">
+    <rd-widget>
+        <rd-widget-header icon="fa-plus" title="停车位新增">
+            <a style="margin-left: -17%" ng-click="createSpace()">一键创建停车位</a>
+            <!--<button class="btn btn-sm btn-info" ng-click="">添加</button>-->
+        </rd-widget-header>
+    </rd-widget>
+    </div>
+</div>
+</div>
+

@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/*html, body {*/
+	/*height: 100%;*/
+	/*background-color: rgb(230, 230, 250);*/
+/*}*/
+
+/*.header h2 {*/
+	/*text-align: center;*/
+	/*color: rgb(210, 0, 0);*/
+	/*font-family: "Courgette", cursive;*/
+	/*font-size: 2em;*/
+	/*font-weight: bold;*/
+	/*letter-spacing: 0.3em;*/
+	/*margin-top: 1em;*/
+	/*-webkit-user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+	/*cursor: default;*/
+/*}*/
+
+.wrapper {
+	margin: 5% auto;
+	width: 324px;
+	height: 324px;
+	position: relative;
+	-webkit-animation-duration: 100s;
+	-moz-animation-duration: 100s;
+	-o-animation-duration: 100s;
+	animation-duration: 100s;
+	-webkit-animation-name: spin;
+	-moz-animation-name: spin;
+	-o-animation-name: spin;
+	animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+.annular_gear {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: url("../img/ring.png");
+	width: 324px;
+	height: 324px;
+	-webkit-animation-duration: 42s;
+	-moz-animation-duration: 42s;
+	-o-animation-duration: 42s;
+	animation-duration: 42s;
+	-webkit-animation-name: spin;
+	-moz-animation-name: spin;
+	-o-animation-name: spin;
+	animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-direction: reverse;
+	-moz-animation-direction: reverse;
+	-o-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+.sun_gear {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 324px;
+	height: 324px;
+	background: url("../img/sun.png") center center no-repeat;
+	-webkit-animation-duration: 18s;
+	-moz-animation-duration: 18s;
+	-o-animation-duration: 18s;
+	animation-duration: 18s;
+	-webkit-animation-name: spin;
+	-moz-animation-name: spin;
+	-o-animation-name: spin;
+	animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+.planet_gears section {
+	position: absolute;
+	height: 98px;
+	width: 98px;
+	background: url("../img/planet.png");
+	-webkit-animation-duration: 12s;
+	-moz-animation-duration: 12s;
+	-o-animation-duration: 12s;
+	animation-duration: 12s;
+	-webkit-animation-name: spin;
+	-moz-animation-name: spin;
+	-o-animation-name: spin;
+	animation-name: spin;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-direction: reverse;
+	-moz-animation-direction: reverse;
+	-o-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+.first_planet_gear {
+	top: 172px;
+	left: 195px;
+}
+
+.second_planet_gear {
+	top: 55px;
+	left: 29px;
+}
+
+.third_planet_gear {
+	top: 38px;
+	left: 180px;
+}
+
+.fourth_planet_gear {
+	top: 190px;
+	left: 46px;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(-360deg);
+	}
+}
+
+@-moz-keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(-360deg);
+	}
+}
+
+@-o-keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(-360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		transform: rotateZ(-360deg);
+	}
+}

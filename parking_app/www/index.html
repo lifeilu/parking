@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Courgette"/>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/ng-cordova.min.js"></script>
+
+    <!--这个是llf的百度地图ak-->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=nhB87EF7jEp0diMOOTjHkXYyHQwGKojT"></script>
+
+    <!--这个是显示进度的容器需要引用的js-->
+    <!--<script src="http://d3js.org/d3.v3.min.js"></script>-->
+    <!--<script src="lib/d3.js"></script>-->
+    <!--<script src="js/liquidFillGauge.js"></script>-->
+    <!--下面这个文件需要放在app.js以后-->
+    <!--<script src="js/directive.js"></script>-->
+
+    <!--这个是首页画图需要的css和js文件-->
+    <link href="css/d3-style.css" rel="stylesheet">
+    <script src="js/Epicyclic_Gearing.js"></script>
+
+    <!--这个是画折线图的js文件-->
+    <!--<script src="lib/chart.js/dist/Chart.js"></script>-->
+
+    <!--这个是sunyan的百度地图ak-->
+    <!--<script src="http://api.map.baidu.com/api?v=2.0&ak=HumGuK48Lis3kPdlHZBxvbvsqgHySljX"></script>-->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/parking.js"></script>
+    <script src="js/lotsearch.js"></script>
+    <script src="js/enter.js"></script>
+    <script src="js/leave.js"></script>
+    <script src="js/navigate.js"></script>
+    <script src="js/space.js"></script>
+    <script src="js/lotdetail.js"></script>
+    <script src="js/search.js"></script>
+  </head>
+  <body  ng-app="parking">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable" align-title="center">
+      <ion-nav-back-button >
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view ></ion-nav-view>
+  </body>
+</html>

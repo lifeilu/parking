@@ -1,0 +1,34 @@
+<ion-view view-title="发现">
+  <ion-content>
+
+    <div>
+      <section class="wrapper">
+      <section class="annular_gear" ></section>
+      <section class="sun_gear"></section>
+      <section class="planet_gears">
+      <section class="first_planet_gear"></section>
+      <section class="second_planet_gear"></section>
+      <section class="third_planet_gear"></section>
+      <section class="fourth_planet_gear"></section>
+      </section>
+      </section>
+    </div>
+
+    <!--<div ng-include="'templates/line-chart2.html'"></div>-->
+
+    <div style="margin-left: 10%; margin-top: 10%">
+      <!--<p>停车记录统计</p><br>-->
+      <!--首次停车:-->
+      <!--<p style="margin-left: 50%">{{ first| date:'yyyy-MM-ss HH:mm:ss'}}</p>-->
+      <!--最近停车:-->
+      <!--{{ last | date:'yyyy-MM-ss HH:mm:ss'}}<br>-->
+      首次停车：<input data-ng-model="first"  style="width: 50%;margin-left: 28%"><br>
+      最近停车：<input data-ng-model="last" style="width: 50%;margin-left: 28%"><br>
+
+      停车次数：<input data-ng-model="times" style="margin-left: 20%; width: 50%;text-align: right"><br>
+      停车费用: <input data-ng-model="total" style="margin-left: 23%; width: 50%;text-align: right"><br>
+    </div>
+
+
+  </ion-content>
+</ion-view>

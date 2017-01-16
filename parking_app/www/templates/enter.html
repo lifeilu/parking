@@ -1,0 +1,47 @@
+<ion-view view-title="进入停车场">
+  <ion-nav-buttons side="left">  
+      <button class="button button-icon icon ion-ios-arrow-back" ng-click="returnback()"></button>  
+  </ion-nav-buttons> 
+  <ion-content class="padding">
+    <div class="list card" >
+      <div class="item item-body">
+        <img class="full-image" ng-src = "{{parklot.id | image}}">
+        <h2>{{parklot.name}}</h2>
+        <p>
+          {{parklot.intro}}
+        </p>
+        <p>
+          <a class="subdued">地址&nbsp:{{parklot.address}}</a>
+        </p>
+        <p>  
+          <a class="subdued">车位数:{{parklot.spacenum}}个</a>
+        </p>
+        <p> 
+          <a class="subdued">收费:&nbsp{{parklot.hourcharge}}元/小时</a>
+        </p>
+        <p>  
+          <a class="subdued">车位&nbsp:第{{parkspace.xpos}}行&nbsp第{{parkspace.ypos}}列</a>
+        </p>
+      </div>
+
+    </div>
+    <!--<h2>{{parklot.name}}</h2>
+      <div>
+        <i class="ion-android-map"></i>
+        <p style = "display:inline">地址&nbsp:{{parklot.address}}</p>
+      </div>
+      <div>
+        <i class="ion-android-car"></i>
+        <p style = "display:inline">车位数:{{parklot.spacenum}}个</p>
+      </div>
+      <div>
+        <i class="ion-cash"></i>
+        <p style = "display:inline">收费&nbsp:{{parklot.hourcharge}}元/小时<p>
+      </div>
+      <div>
+        <i class="ion-android-bus"></i>
+        <p style = "display:inline">车位&nbsp:第{{parkspace.xpos}}行&nbsp第{{parkspace.ypos}}列<p>
+      </div>-->
+      <button class="button button-block button-positive icon-left " ng-click="confirm()">开始导航</button>
+  </ion-content>
+</ion-view>

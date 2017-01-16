@@ -1,0 +1,31 @@
+<ion-view view-title="附近停车场">
+  <ion-nav-buttons side="left">
+      <button class="button button-icon icon ion-ios-arrow-back" ng-click="returnback()"></button>
+  </ion-nav-buttons>
+  <ion-content class="padding">
+    <div id="hidemap"></div>
+  <!--这部分是搜索完之后的显示-->
+    <div class="list" ng-repeat="parking in parkings">
+      <a class="item item-thumbnail-left" ui-sref="lotdetail({data:parking.id})">
+        <img ng-src="{{parking.id | image}}">
+        <h2>{{parking.name}}</h2>
+        <p>距离:&nbsp{{(parking.distance/1000).toFixed(2)}}公里</p>
+        <p>空闲车位数:{{parking.spacenum}}个</p>
+        <p>收费:&nbsp{{parking.hourcharge}}元/小时</p>
+      </a>
+    </div>
+
+    <!--<div class="item-remove-animate item-avatar item-icon-right" ng-repeat="parking in parkings" type="item-text-wrap" >-->
+      <!--<a ui-sref="navigate({longitude:parking.longitude,latitude:parking.latitude})"><h2>{{parking.name}}</h2></a>-->
+      <!--<p>距离:&nbsp{{parking.distance/1000}}公里</p>-->
+      <!--<p>车位数:{{parking.spacenum}}个</p>-->
+      <!--<p>收费:&nbsp{{parking.hourcharge}}元/小时<p>-->
+      <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+    <!--</div>-->
+    <img ng-show = "click" src="img/parkinglot.png">
+    <button class="button button-block button-positive icon-left "
+            ng-click="tirarFoto()">
+      获取地理定位
+    </button>
+  </ion-content>
+</ion-view>

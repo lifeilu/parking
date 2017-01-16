@@ -1,0 +1,19 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >用户新建</uib-alert>
+</div>
+
+<div class="col-xs-12">
+    <rd-widget >
+        <rd-widget-header icon="fa-tasks" title="用户新建">
+        </rd-widget-header>
+
+        <div class="table-responsive"  ng-controller="AddUserCtrl">
+            用&nbsp;户&nbsp;名&nbsp;&nbsp;&nbsp;<input type="text" data-ng-model="create.username" placeholder="请输入用户名">
+            手&nbsp;机&nbsp;号&nbsp;&nbsp;<input type="text" data-ng-model="create.phone" placeholder="请输入手机号">
+            用户密码&nbsp;<input type="password" data-ng-model="create.password" placeholder="请输入密码"><br><br>
+            汽车型号&nbsp;<input type="text" data-ng-model="create.cartype" placeholder="请输入汽车型号">
+            汽车牌照&nbsp;<input type="text" data-ng-model="create.carid" placeholder="请输入牌照"><br><br>
+            <button class="btn btn-sm btn-info" style="margin-left: 23.5%;width:23.5%" ng-click="createUser()">创建</button>
+        </div>
+    </rd-widget>
+</div>

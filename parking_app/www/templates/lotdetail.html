@@ -1,0 +1,24 @@
+<ion-view view-title="附近停车场">
+  <ion-content class="padding">    
+    <div class="list card" >
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{parking.id | image}}">
+        <h2>{{parking.name}}</h2>
+        <p>
+          {{parking.intro}}
+        </p>
+        <p>
+          <a class="subdued">车位数:{{parking.address}}</a>
+        </p>
+        <p>
+          <a class="subdued">车位数:{{parking.spacenum}}个</a>
+        </p>
+        <p>
+          <a class="subdued">收费:&nbsp{{parking.hourcharge}}元/小时</a>
+        </p>
+      </div>
+
+    </div>
+    <button class="button button-block button-positive icon-left " ui-sref="navigate({longitude:parking.longitude,latitude:parking.latitude})">开始导航</button>
+  </ion-content>
+</ion-view>

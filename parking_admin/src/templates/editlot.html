@@ -1,0 +1,35 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >修改停车场</uib-alert>
+</div>
+<div class="col-xs-12">
+    <div>
+        <div>
+            <p>当前停车场信息</p>
+        </div>
+    <form style="margin-top: 2%">
+        停车场序号:&nbsp;<input data-ng-model="myid" placeholder="id"  style="width: 25%;">
+        停车场名称:&nbsp;<input data-ng-model="editLot.name" placeholder="名称"  style="width: 25%;">
+        停车场收费:&nbsp;<input data-ng-model="editLot.hourcharge" placeholder="每小时收费"  style="width: 25%;"><br><br>
+        停车位数目:&nbsp;<input data-ng-model="editLot.spacenum" placeholder="停车位数目"  style="width: 25%;">
+        停车位行号:&nbsp;<input data-ng-model="editLot.xpos" placeholder="行数"  style="width: 25%;">
+        停车位列号:&nbsp;<input data-ng-model="editLot.ypos" placeholder="列数"  style="width: 25%;"><br><br>
+
+        <img src="http://112.74.62.114:8080/file/Udb7fe87147e10/SZLKD/Parklot/{{myid}}"  style="margin-left: 40%" >
+        <p style="text-align: center;margin-left: -4%">停车场主图</p>
+
+        停车场介绍:&nbsp;<input data-ng-model="editLot.intro" placeholder="描述" style="width: 89%;"><br><br>
+
+        <div>
+            <div class="col-md-4" style="margin-left: -1.5%">
+            编辑主图：<input ngf-select type="file" /><br><br>
+            </div>
+            <div class="col-md-8">
+                <button class="btn btn-sm btn-info" style="color:black;background-color: transparent" ng-click="updateImg()">更新主图</button>
+            </div>
+        </div>
+
+        <button class="btn btn-sm btn-info" style="margin-left: 1.5%;width: 32%;margin-top: 2%" ng-click="save()">点击修改</button>
+    </form>
+
+    </div>
+</div>

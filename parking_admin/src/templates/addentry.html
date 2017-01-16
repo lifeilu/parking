@@ -1,0 +1,16 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >停车场入口新建</uib-alert>
+</div>
+
+<div class="col-xs-12">
+    <rd-widget >
+        <rd-widget-header icon="fa-tasks" title="停车场入口新建">
+        </rd-widget-header>
+
+        <div class="table-responsive" >
+            入口行号：<input type="text" data-ng-model="entryx" placeholder="请输入行号"><br><br>
+            入口列号：<input type="text" data-ng-model="entryy" placeholder="请输入列号"><br><br>
+            <button class="btn btn-sm btn-info" style="margin-left: 5%;width:10%" ng-click="createEntry()">创建</button>
+        </div>
+    </rd-widget>
+</div>

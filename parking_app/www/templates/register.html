@@ -1,0 +1,42 @@
+<ion-view view-title="注册">
+  <ion-content class="padding" style="text-align: center;">
+    <img ng-src="img/user.jpeg" style="width:40%; margin-top: 5%;" >
+
+    <div style="margin-top: 5%; margin-right: auto; margin-left: auto; width: 80%">
+      <div class="green-bottom-border" style="margin-top: 0%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div style="margin: 0 auto;">
+          <i class="ion-android-person login-icon" style="color:#11c1f3;font-size: 100%"></i>
+          <input type="text" class="login-input" style="margin-bottom: 2%" placeholder="请填写用户名" data-ng-model="user.username">
+        </div>
+      </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div style="margin: 0 auto;">
+          <i class="ion-android-phone-portrait login-icon" style="color:#11c1f3;font-size: 100%"></i>
+          <input type="text" class="login-input"  style="margin-bottom: 2%" placeholder="请填写手机号" data-ng-model="user.phone">
+        </div>
+      </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div style="margin: 0 auto;">
+          <i class="ion-android-lock login-icon" style="color:#11c1f3;font-size: 100%"></i>
+          <input type="password" class="login-input" style="margin-bottom: 2%" placeholder="请填写密码" data-ng-model="user.password">
+        </div>
+      </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+        <div style="margin: 0 auto;">
+          <i class="ion-android-car login-icon" style="color:#11c1f3;font-size: 100%"></i>
+          <input type="text" class="login-input" style="margin-bottom: 2%" placeholder="请填写汽车型号" data-ng-model="user.cartype">
+        </div>
+      </div>
+      <div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important" >
+        <div style="margin: 0 auto;">
+          <i class="ion-android-car login-icon" style="color:#11c1f3;font-size: 100%"></i>
+          <input type="text" class="login-input"  style="margin-bottom: 2%" placeholder="请填写车牌号" data-ng-model="user.carid">
+        </div>
+      </div>
+
+      <div class="center-middle" style = "margin-top:10%;">
+        <button class="button button-balanced" ng-click="register()" style="font-size:20px;width: 100%;background-color:#11c1f3 ;color:#fafafa">注册</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

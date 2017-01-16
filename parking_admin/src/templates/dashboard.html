@@ -1,0 +1,185 @@
+<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
+  <div class="col-xs-12">
+    <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-lg-3 col-md-6 col-xs-12" ng-controller="UserCtrl">
+		<rd-widget>
+			<rd-widget-body>
+				<div class="widget-icon green pull-left">
+					<i class="fa fa-users"></i>
+				</div>
+				<div class="title">{{usernum}}</div>
+				<div class="comment">
+					<a href="#user">用户</a>
+				</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+
+	<div class="col-lg-3 col-md-6 col-xs-12" ng-controller="LotCtrl">
+		<rd-widget>
+			<rd-widget-body>
+				<div class="widget-icon orange pull-left">
+					<i class="fa fa-sitemap"></i>
+				</div>
+				<div class="title">{{lotnum}}</div>
+				<div class="comment">
+					<a href="#lot">停车场</a>
+				</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+
+	<div class="col-lg-3 col-md-6 col-xs-12" ng-controller="OrderCtrl">
+		<rd-widget>
+			<rd-widget-body>
+				<div class="widget-icon red pull-left">
+					<i class="fa fa-tasks"></i>
+				</div>
+				<div class="title">{{ordernum}}</div>
+				<div class="comment">
+					<a href="#order">订单</a>
+				</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+
+	<div class="col-lg-3 col-md-6 col-xs-12">
+		<rd-widget>
+			<rd-widget-body>
+				<div class="widget-icon blue pull-left">
+					<i class="fa fa-support"></i>
+				</div>
+				<div class="title">扫描</div>
+				<div class="comment">
+					<a href="#qrCode">二维码</a>
+				</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6" ng-controller="UserCtrl">
+		<rd-widget>
+			<rd-widget-header icon="fa-users" title="用户">
+				<!--<button ng-click="search()" class="btn btn-sm btn-info">查看</button>-->
+				<input type="text" placeholder="搜索" class="form-control input-sm" />
+			</rd-widget-header>
+			<rd-widget-body classes="medium no-padding">
+				<div class="table-responsive">
+					<table st-table="rowCollection" class="table">
+						<thead>
+						<tr>
+							<th st-sort = "id">用户ID</th>
+							<th st-sort = "username">用户名</th>
+							<th st-sort =  "phone">手机号码</th>
+							<th st-sort = "cartype">车辆类型</th>
+							<th st-sort = "carid">车辆牌照</th>
+							<th st-sort = "moeny">账户余额</th>
+						</tr>
+
+						<!--<tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>-->
+						</thead>
+						<tbody>
+						<tr ng-repeat="row in rowCollection">
+							<td>{{row.id}}</td>
+							<td>{{row.username}}</td>
+							<td>{{row.phone}}</td>
+							<td>{{row.cartype}}</td>
+							<td>{{row.carid}}</td>
+							<td>{{row.money | currency}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</rd-widget-body>
+			<rd-widget>
+	</div>
+	<div class="col-lg-6" ng-controller="OrderCtrl">
+		<rd-widget>
+      		<rd-widget-header icon="fa-tasks" title="订单">
+				<!--<a href="#">管理</a>-->
+      		</rd-widget-header>
+      		<rd-widget-body classes="medium no-padding">
+				<div class="table-responsive">
+					<table st-table="rowCollection" class="table">
+						<thead>
+						<th st-sort = "id">订单号</th>
+						<th st-sort = "userid">用户ID</th>
+						<!--<th st-sort = "parkid">停车场号</th>-->
+						<!--<th st-sort = "parkspaceid">停车位号</th>-->
+						<th st-sort = "entertime">停入时间</th>
+						<!--<th st-sort = "isleave">是否离开</th>-->
+						<th st-sort = "leavetime">离开时间</th>
+						<th st-sort = "charge">收费</th>
+						</thead>
+						<tbody>
+						<tr ng-repeat="row in rowCollection">
+							<td>{{row.id}}</td>
+							<td>{{row.userid}}</td>
+							<!--<td>{{row.parkid}}</td>-->
+							<!--<td>{{row.parkspaceid}}</td>-->
+							<td>{{row.entertime}}</td>
+							<!--<td data-ng-model="parseDate(new Date(Date.parse(row.entertime)))"></td>-->
+							<!--<td>{{row.isleave}}</td>-->
+							<td>{{row.leavetime}}</td>
+							<td>{{row.charge}}</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+
+</div>
+
+<div class="row" ng-controller="LotCtrl">
+	<div class="col-lg-6">
+   		<rd-widget>
+   			<rd-widget-header icon="fa-plus" title="停车场">
+   				<!--<button class="btn btn-sm btn-info" >测试</button>-->
+   			</rd-widget-header>
+   			<rd-widget-body>
+				<table st-table="rowCollection" class="table">
+					<thead>
+					<tr>
+						<th st-sort = "id">停车场ID</th>
+						<th st-sort = "name">名称</th>
+						<th st-sort = "address">地址</th>
+						<th st-sort = "hourcharge">收费</th>
+						<!--<th st-sort = "longitude">经度</th>-->
+						<!--<th st-sort = "latitude">纬度</th>-->
+						<th st-sort = "spacenum">停车位个数</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in rowCollection">
+							<td>{{row.id}}</td>
+							<td>{{row.name}}</td>
+							<td>{{row.address}}</td>
+							<td>{{row.hourcharge}}元/小时</td>
+							<td>{{row.spacenum}}</td>
+						</tr>
+					</tbody>
+				</table>
+   			</rd-widget-body>
+   		</rd-widget>
+	</div>
+
+	<div class="col-lg-6">
+		<rd-widget>
+			<rd-widget-header icon="fa-cog fa-spin" title="轻松一刻">
+				<!--<a href="http://tobiasahlin.com/spinkit/" target="_blank">实时记录</a>-->
+			</rd-widget-header>
+			<rd-widget-body>
+				<rd-loading></rd-loading>
+
+			</rd-widget-body>
+		</rd-widget>
+	</div>
+</div>

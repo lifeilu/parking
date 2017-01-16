@@ -1,0 +1,33 @@
+<div class="col-xs-12">
+    <uib-alert  type="success" >二维码生成</uib-alert>
+</div>
+
+<div class="col-xs-12"  ng-controller="QRCtrl" ng-init="init()">
+    <!--<rd-widget >-->
+        <!--<rd-widget-header icon="fa-tasks" title="二维码生成">-->
+        <!--</rd-widget-header>-->
+        <div class="table-responsive" style="width: 400px;height: 400px" >
+            <input ng-model="myCode" placeholder="请输入停车场ID" style="width: 160px;height: 30px">
+            <button class="btn btn-sm btn-info" style="margin-left: 15%;width:40%" ng-click="getCodeImg()">点击生成二维码</button> <br><br>
+
+            <div id = "myqr" ng-show="myShow" style="width:100px; height:100px; margin-left: 15%"></div>
+            <div id="qrcode" ng-show="showQr" style="width:200px; height:200px; margin-left: 15%"></div>
+        </div>
+    <!--</rd-widget>-->
+</div>
+
+
+<!--<div ng-controller="QRCtrl" ng-init="init()">-->
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--请输入停车场ID &nbsp;<input ng-model="myCode" />-->
+    <!--&lt;!&ndash;<br><br>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button ng-click="getCodeImg()">点击生成二维码</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<br><br>&ndash;&gt;-->
+
+    <!--<button ng-click="getCodeImg()">点击生成二维码</button>-->
+    <!--<div id = "myqr" ng-show="myShow" style="width:200px; height:200px; margin-left: 15%"></div>-->
+
+
+    <!--<div id="qrcode" ng-show="showQr" style="width:200px; height:200px; margin-left: 15%"></div>-->
+<!--</div>-->
+

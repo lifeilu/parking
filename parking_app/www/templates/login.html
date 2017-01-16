@@ -1,0 +1,49 @@
+<ion-view view-title="登陆">
+	<!--<ion-content class="no-scroll">-->
+    <ion-content class="no-scroll">
+	    <!--logo-->
+
+      <div class="animated pulse" style="margin-top:15%; animation-duration: 1600ms;text-align: center">
+      <!--<svg id="fillgauge1" width="100%" height="150" style="margin-top: 30px" liquid-angular liquid-value="55"></svg>-->
+      <!--<svg></svg>-->
+
+      <!--<section class="wrapper">-->
+              <!--<section class="annular_gear" ></section>-->
+              <!--<section class="sun_gear"></section>-->
+              <!--<section class="planet_gears">-->
+              <!--<section class="first_planet_gear"></section>-->
+              <!--<section class="second_planet_gear"></section>-->
+              <!--<section class="third_planet_gear"></section>-->
+              <!--<section class="fourth_planet_gear"></section>-->
+            <!--</section>-->
+      <!--</section>-->
+
+
+      <img src="img/huaban.jpeg" style = "width:60%;">
+		</div>
+		<!--登录注册模块-->
+		<div style="margin-top: 5%; margin-right: auto; margin-left: auto; width: 80%">
+		    <!--用户名-->
+			<div class="green-bottom-border" style="margin-top: 0; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+				<div style="margin: 0 auto;">
+					<i class="ion-android-person login-icon" style="margin-left:5%;color:#11c1f3;font-size: 100%"></i>
+					<input type="text" class = "login-input" style="margin-bottom: 1%;font-size: 15px" placeholder="请填写用户名" ng-model="user.username" >
+				</div>
+			</div>
+			<!--密码-->
+			<div class="green-bottom-border" style="margin-top: 5%; vertical-align: middle; border-bottom:solid 1px rgba(17, 193, 243, 0.23) !important">
+				<div style="margin: 0 auto;">
+					<i class="ion-android-lock login-icon" style="margin-left:5%;color:#11c1f3;font-size: 100%"></i>
+					<input type="password" class = "login-input" style="margin-bottom: 1%;font-size: 15px" placeholder="请填写密码" ng-model="user.password" >
+				</div>
+			</div>
+			<div class="center-middle" style="margin-top:15%;text-align: center;">
+				<button class="button button-balanced" ng-click="login()" style="width: 49%;height:41px; background-color:#11c1f3 ;color:#fafafa;font-size: 20px">登录</button>
+        <button ui-sref="register" class="button button-balanced" style="width: 49%;color: #444;border-color: #11c1f3;background: #fafafa;font-size: 20px">注册</button>
+			<!--注册通道-->
+			<!--<a  ui-sref="register" style="margin-top: 8%; float: right; font-size: 16px" nav-direction="swap" >注册</a>-->
+		</div>
+    </div>
+	</ion-content>
+</ion-view>
+
